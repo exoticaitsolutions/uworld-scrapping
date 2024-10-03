@@ -5,7 +5,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
-from database_configration import get_or_create_answer_choice_id, get_or_create_passage_id, get_or_create_question_id, insert_data_into_mysql
+from database_configration import get_or_create_answer_choice_id, get_or_create_passage_id, get_or_create_question_id
 from webdriver_configration import driver_confrigration
 
 # Constants
@@ -75,7 +75,7 @@ def scrap_question_passages():
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight * 0.6);")
     # Start scraping questions
     id_counter = 1
-    for row in range(9, 10):
+    for row in range(1,3):
         icone = driver.find_element(By.XPATH, f'//*[@aria-label="Review Test Analysis for test {row+1}"]')
         print(f"Found icon for row {row + 1}")
         icone.click()
@@ -90,14 +90,6 @@ def scrap_question_passages():
         time.sleep(10)
         while True:
             try:
-                # Extract information for the current question
-                # print("1---------------"*8)
-                # print("current_url1 : ", current_url)
-                # print("1---------------"*8)
-                # print()
-                # test_number = re.search(r'\d+', test_name).group()
-                # print("test_number : ", test_number)
-                # print()
                 try:
                     content = driver.find_element(By.ID, 'currentAbstract').text
                 except:
@@ -128,8 +120,23 @@ def scrap_question_passages():
                     explanation = ''
                 try:
                     question_count1 = driver.find_element(By.ID, 'abstractQuestionCount').text
-                    question_count = question_count1.split('Questions')[1].split('–')[1].split(')')[0].strip()
+                    parts = question_count1.split(' ')
+                    
+                    first_number = int(parts[1])
+                    match = re.search(r'(\d+)–(\d+)', question_count1)
+                    if match:
+                        second_number = int(match.group(1))  # '35' as an integer
+                        third_number = int(match.group(2))   # '39' as an integer
+                    else:
+                        second_number = third_number = None  # If no match is found
+                    if int(first_number) == 1:
+                       question_count1 = third_number
+                    else:
+                        question_count1 = third_number - second_number
+                    # question_count = question_count1.split('Questions')[1].split('–')[1].split(')')[0].strip()
+                    print("--------------------"*8)
                     print("question count text : ", question_count1)
+                    print("--------------------"*8)
                 except:
                     question_count = ''
                
@@ -142,7 +149,7 @@ def scrap_question_passages():
                     print("subject : ------------", subject)
                 except:
                     subject = ''
-                passage_id = get_or_create_passage_id(title, content, subject, question_count, topic)
+                passage_id = get_or_create_passage_id(title, content, subject, question_count1, topic)
                 print("--------------------"*8)
                 print("passage_id : ", passage_id)
                 print("--------------------"*8)
@@ -165,7 +172,7 @@ def scrap_question_passages():
                         "title": title,
                         "content": content,
                         "subject": subject,
-                        "question_count": question_count,
+                        "question_count": question_count1,
                         "topic": topic,
                     }
                 )
@@ -175,7 +182,7 @@ def scrap_question_passages():
                 # Attempt to click on the "Next" button
                 click_on_next = driver.find_element(By.XPATH, '//*[@aria-label="Navigate to the next question"]')
                 click_on_next.click()
-                time.sleep(5)  # Adjust sleep time based on page load speed
+                time.sleep(3)  # Adjust sleep time based on page load speed
 
             except NoSuchElementException:
                 try:
@@ -191,7 +198,7 @@ def scrap_question_passages():
             except Exception as e:
                 print("Review Incomplete Questions element found, stopping scraping.")
                 back = driver.get('https://apps.uworld.com/courseapp/gradschool/v13/previoustests/13343560')
-                time.sleep(10)
+                time.sleep(6) 
                 continue
 
     # Write the scraped data to a CSV file
@@ -210,3 +217,4 @@ def scrap_question_passages():
 
 # Call the main scraping function
 scrap_question_passages()
+
