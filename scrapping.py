@@ -39,32 +39,35 @@ def scrap_question_passages():
 
     skip_yes = driver.find_element(By.XPATH, '/html/body/div[9]/div/div/div[3]/button[1]')
     skip_yes.click()
-    time.sleep(5)
+    time.sleep(3)
     print("Clicked on Skip_Yes successfully")
 
     launch = driver.find_element(By.XPATH, '//*[@id="BtnLaunch13343560"]')
     launch.click()
-    time.sleep(15)
+    time.sleep(20)
     print("Clicked on Launch successfully")
 
     # Navigate to the QBank section
     qbank = driver.find_element(By.XPATH, '/html/body/app-root/app-mainlayout/div/div[1]/leftnav/mat-sidenav-container/mat-sidenav/div/div[2]/mat-nav-list/mat-list-item[3]')
     qbank.click()
-    time.sleep(5)
     print("Clicked on Qbank successfully")
 
     preview_test = driver.find_element(By.XPATH, '/html/body/app-root/app-mainlayout/div/div[1]/leftnav/mat-sidenav-container/mat-sidenav/div/div[2]/mat-nav-list/mat-list-item[3]/span/mat-nav-list/mat-list-item[2]/span/span[2]/a')
     preview_test.click()
-    time.sleep(5)
     print("Clicked on Preview Test successfully")
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight * 0.9);")
+    time.sleep(5)
+    print("scroll down -----------------------------------")
+    item_per_page = driver.find_element(By.XPATH, '/html/body/app-root/app-mainlayout/div/div[2]/gradschool-previoustests/div/previous-tests/div[2]/mat-paginator/div/div/div[1]/mat-form-field/div/div[1]/div/mat-select/div/div[1]')
+    item_per_page.click()
+    time.sleep(5)
+    click_on_100 = driver.find_element(By.XPATH, '/html/body/div[6]/div[2]/div/div/div/mat-option[5]/span')
+    click_on_100.click()
+    time.sleep(7)
     all_data = driver.find_element(By.ID, 'cdk-drop-list-0')
     rows = all_data.find_elements(By.TAG_NAME, "tr")
     all_rows = len(rows)
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight * 0.9);")
-    next_button = driver.find_element(By.XPATH, '//*[@aria-label="Next page"]')
-    next_button.click()
-    time.sleep(10)
-
+  
     
     print("-------------"*88)
     print("all_rows : ", all_rows)
@@ -74,7 +77,7 @@ def scrap_question_passages():
     data = []
     
 
-    for row in range(0, all_rows+1):
+    for row in range(18, all_rows+1):
         try:
             print(f"Processing row {row}...")
             icone = driver.find_element(By.XPATH, f'//*[@aria-label="Review Test Analysis for test {row+1}"]')

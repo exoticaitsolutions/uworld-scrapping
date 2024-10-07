@@ -1,0 +1,160 @@
+id,text,correct_answer,passage_id,explanations
+477,"Three charged spheres are each held fixed at a distance r from the other two as shown in the following figure.
+The diameter of each sphere is much smaller than r.  The sphere of charge +Q is then allowed to move freely.  Which of the following figures best illustrates the acceleration of the sphere with charge +Q immediately after it is released?",C,85,"Stationary charged objects interact via electrostatic forces.  Charges of the same sign repel and charges of opposite sign attract.  According to Coulomb's law, the magnitude of the electrostatic force between two charges (q1 and q2) is:
+where r is the distance between the charges and k is Coulomb's constant, k = 9.0 × 109 N·m2/C.
+In this question, the sphere of charge +Q experiences two unique electrostatic forces because of interactions with the other charged spheres.  First, the sphere of charge +2Q and the sphere of charge +Q exert on each other a repulsive force that acts along the line between each, and the magnitude of this force is:
+In addition, the sphere of charge −3Q and sphere of charge +Q exert on each other an attractive force of even greater magnitude:
+When the two force vectors are added together, the result points downward and to the left from +Q's original position.  Since Newton's second law implies acceleration a is proportional to the net force on an object:
+the best representation of the acceleration of the +Q charge after release is the vector shown in Choice C.
+(Choice A)  This answer incorrectly assumes the force between +Q and −3Q is repulsive.  Instead, the electrostatic force between these spheres is attractive.
+(Choice B)  This answer incorrectly assumes the magnitude of the force between +Q and +2Q is greater than that between +Q and −3Q.
+(Choice D)  This answer incorrectly assumes the force between +Q and +2Q is attractive.  Instead, the electrostatic force between these spheres is repulsive.
+Educational objective:
+The direction and magnitude of the electrostatic force between charges depends on the relative signs of the charges, the magnitude of the charges, and the distance between them.  If multiple forces act on an object, the net force is determined by vector addition."
+478,"A charged particle is accelerated in a uniform electric field.  When its velocity is 2 m/s, its electric potential energy is 100 J and its kinetic energy is 10 J.  What is the particle's potential energy when its velocity reaches 4 m/s?",B,85,"Electric charges generate electric fields, regions of space that exert an electrostatic force on charges.  The electrostatic force is conservative and the total energy E of a charged particle in an electric field is conserved.  In other words, the sum of the charge's electric potential energy (PE) and kinetic energy (KE) is constant:
+Einitial=Efinal
+PEinitial+KEinitial=PEfinal+KEfinal
+The initial E of the particle in the electric field is the sum of the given PE and KE:
+Einitial=PEinitial+KEinitial
+Einitial=100 J+10 J=110 J
+Furthermore, KE is proportional to mass m and the square of velocity v:
+KE=
+1
+2
+mv2
+As the particle accelerates, its velocity increases by a factor of 2, from 2 to 4 m/s.  Therefore, its final KE increases by a factor of 4:
+KEfinal=
+1
+2
+m(2v)2=22(
+1
+2
+mv2)=4(
+1
+2
+mv2)
+KEfinal=4(KEinitial)=4(10 J)=40 J
+The final PE of the particle at 4 m/s is the difference between the overall total energy and its final KE:
+PEfinal=Efinal-KEfinal=Einitial-KEfinal
+PEfinal=110 J-40 J=70 J
+(Choice A)  The sum, not the product, of PE and KE for a conservative force is constant.  If 1,000 J is incorrectly used as KE, the calculated PE would be 1,000/40 = 25 J.
+(Choice C)  The KE of the particle should increase by a factor of 4, not 2, when its velocity increases by a factor of 2.  If 20 J is incorrectly used as its KE, the calculated PE would be 90 J.
+(Choice D)  The PE of the particle cannot be greater than its sum of PE and KE because KE cannot be negative.
+Educational objective:
+Electrostatic force is conservative; the sum of potential energy and kinetic energy is constant.  KE is the product of mass m and the square of velocity v:  KE=
+1
+2
+mv2
+.  Therefore, the potential energy of a particle is the difference between its total energy and its KE."
+479,Which of the following color transitions best describes what may take place as a light-emitting object begins releasing electromagnetic waves of progressively higher energy?,B,85,"Electromagnetic radiation refers to the propagation of waves of oscillating electric and magnetic fields.  The electromagnetic spectrum refers to all classifications of radiation, which differ from one another in terms of frequency (f), wavelength (λ), and energy but are related to one another in terms of the speed of light in a vacuum (c = 3 × 108 m/s):
+The complete electromagnetic spectrum is often visually represented by an array of radiation organized from radio waves (largest wavelength and lowest frequency) to gamma rays (smallest wavelength and highest frequency).  The subspectrum of visible light is featured within the middle of this array, spanning the range of wavelengths from about 750 nm (red) to approximately 400 nm (violet).
+Not only does each color of visible light have a different wavelength and frequency, but each also has a different energy.  This energy is described by the Planck-Einstein equation, which relates the energy (E) of an electromagnetic wave (and corresponding photon) to wave frequency and Planck's constant (h = 6.62 × 10−34 m2·kg/s):
+Combining both of the previous equations gives an expression for the energy with respect to wavelength:
+In the question, a light-emitting object releases electromagnetic waves of progressively higher energy.  Based on the equations above, the frequency of these emitted electromagnetic waves must progressively increase and the wavelength must progressively decrease.  Accordingly, when emitting across the visible light spectrum from lower to higher energy, the color progression would be red, orange, yellow, green, blue, indigo, and violet.  Therefore, the transition is from red light to green light to blue light.
+Educational objective:
+The visible light spectrum refers to electromagnetic radiation that may be detected by the human eye, ranging from approximately 750 to 400 nm in wavelength (ie, red to violet).  The energy associated with electromagnetic radiation is directly proportional to wave frequency and inversely proportional to wavelength."
+480,"Two convex lenses are placed in series such that the image produced by first lens becomes the object of the second lens.  If each lens is capable of producing a three-fold magnified image, what is the maximum magnification that this two-lens system can provide?",D,85,"In optics, magnification refers to the ability of lenses to produce images that are smaller or larger than a real object that is placed at some distance in front of the lens.  The expression for magnification (M) relates the object height (ho) to the image height (hi):
+Magnification is not a fixed property of lenses.  Both lens type and object placement influence the magnification of an image.  For example, a convex lens may produce a magnified real image if the object is placed at a distance from the lens greater than lens focal length.
+Image magnification may also occur within lens systems comprised of multiple lenses; this type of setup is common inside microscopes and telescopes.  For multiple lenses placed in series (ie, not in direct contact), the magnification of the lens series is a product of each lens' individual magnification:
+In this question, two convex lenses each with an individual magnification of 3 are placed in series and spaced such that the image of the object produced by the first lens becomes the image magnified by the second lens.  Applying the equation for total magnification for this system gives:
+Therefore, the total magnification produced by such a two-lens setup would be equal to 9.
+(Choices A and B)  Depending on lens characteristics and object placement, a two-lens system may yield a value for magnification that is less than or equal to the magnification of each lens.  However, the question refers to maximum possible magnification.
+(Choice C)  Total magnification must be found by multiplying (not adding) the magnification value of the first lens by that of the second lens.  Addition is used to find the total lens strength S of multiple lenses placed immediately adjacent to one another, where total power equals the sum of individual lens powers.
+Educational objective:
+Magnification is the phenomenon in which a lens produces an image that is enlarged or shrunken relative to the original object.  Multi-lens systems arranged in series provide a combined magnification equal to the product of all individual lens magnifications."
+481,"The fundamental frequency of a glass tube is measured to be f when the tube is capped at one end, but open at the other end.  What is the fundamental frequency of the tube when the end cap is removed and both ends are open?",D,85,"Standing sound waves are generated in tubes due to interference between incident waves and reflected waves, which move in opposite directions in the air tube.  The resonating sound waves in a pipe create nodes (ie, points of zero amplitude) at closed ends due to restricted air movement and antinodes (ie, points of maximal amplitude) at open ends due to free motion of air molecules.
+A pipe open on both ends will resonate at the fundamental frequency when antinodes are formed at each end.  A pipe with one end open will resonate at the fundamental frequency when a node is formed at the closed end and an antinode is formed at the open end.
+In this question, the glass tube is initially closed c at one end and then open o at both ends.  At the fundamental frequency, the wavelengths of sound are twice and four times the tube length L:
+λo=2L
+λc=4L
+Therefore,
+λc=2λ0
+The wave speed v is the product of the wavelength λ and frequency f of a wave:
+v=λf
+Because the speed of sound is constant in the tube:
+vo=vc
+foλo=fcλc
+foλo=fc(2λo)
+fo=2fc
+Therefore, the fundamental frequency of the glass tube when open at both ends is twice that of the fundamental frequency when the tube is closed at one end.
+(Choice A)  f/4 is the result of an error made by plugging in the wavelength for a closed-end tube into wave speed equation (f = v/4L).
+(Choice B)  f/2 would be correct if the question instead asked for the fundamental frequency of the tube closed at one end.
+(Choice C)  f would be true if the tube length changed to maintain the same fundamental frequency.
+Educational objective:
+The fundamental frequency of standing sound waves in a tube of fixed length depends on whether the pipe is open at both ends or closed at one end."
+482,"The dependence of a metal's resistance on its length per unit area is shown.
+What is the resistivity of the metal?",B,85,"Resistivity ρ is a property that characterizes a material's intrinsic ability to impede the flow of charge.  The resistance R in a sample of a material is directly proportional to the product of the material's resistivity and the sample's length L and is inversely proportional to the sample's cross-sectional area A:
+R
+=
+ρ
+L
+A
+In this question, the graph shows measured resistance of a metal with respect to the length to area ratio.  The best-fit line indicates a directly proportional relationship between the quantities measured on each axis and can be related to the resistivity equation as:
+y
+=
+m
+⋅
+x
+R
+=
+ρ
+⋅
+L
+A
+Therefore, R is directly proportional to the quantity L/A, and the slope is represented by the ρ.  To determine ρ, the slope can be calculated between two points that lie on the best-fit line.  The resistance has a value of 2 Ω when the length to area ratio is 1 × 108 m−1 and a value of 4 Ω when the length to area ratio is 2 × 108 m−1.  Hence, the resistivity is given by:
+ρ
+=
+rise
+run
+=
+∆
+R
+∆
+L
+A
+ρ
+=
+4
+  Ω
+-
+2
+  Ω
+2
+×
+10
+8
+  m
+-
+1
+-
+1
+×
+10
+8
+  m
+-
+1
+ρ
+=
+2
+  Ω
+1
+×
+10
+8
+  m
+-
+1
+=
+2
+×
+10
+-
+8
+  Ω
+⋅
+m
+Therefore, the resistivity of the metal is 2 × 10−8 Ω·m.
+(Choices A, C, and D)  These answer choices are multiples of ¼, 2, and 4 off, respectively, from the correct answer, most likely due to incorrectly dividing the change in the length to area ratio by the change in the resistance (or by misplacing numbers within the slope formula).
+Educational objective:
+The resistivity of a conductor is an intrinsic property that measures the conductor's ability to impede charge flow.  Resistivity equals the slope of a graph of resistance versus length per unit area."
